@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ================================
    BASE
 ================================ */
@@ -88,4 +89,96 @@ div[data-testid="stFileUploader"] button {
 /* Hide default upload text */
 div[data-testid="stFileUploader"] p {
     display: none;
+=======
+/* ================================
+   BASE
+================================ */
+html, body, [data-testid="stApp"] {
+    background: #ffffff;
+    color: #111827;
+}
+
+/* ================================
+   CONTENT + CHAT AREA (LEFT ALIGN FIX)
+================================ */
+.block-container {
+    max-width: 700px !important;
+    margin: 0 auto !important;
+    padding-bottom: 200px !important;
+
+    padding-left: 0px !important;     /* 👈 REMOVE LEFT SPACE */
+    padding-right: 0px !important;
+}
+
+/* 🔥 FORCE REMOVE INNER PADDING (KEY FIX) */
+.block-container > div {
+    padding-left: 0px !important;
+    margin-left: -120px !important;   /* 👈 MOVE CONTENT LEFT */
+}
+
+/* Extra safety */
+.main > div {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ================================
+   SIDEBAR (REDUCED WIDTH)
+================================ */
+section[data-testid="stSidebar"] {
+    background: #87ceeb !important;
+    border-right: 1px solid #87ceeb;
+    width: 240px !important;
+    min-width: 240px !important;
+    max-width: 240px !important;
+}
+
+/* ================================
+   QUERY BAR (CENTERED)
+================================ */
+div[data-testid="stChatInput"] {
+    position: fixed !important;
+    bottom: 80px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    width: 700px !important;
+    max-width: 700px !important;
+
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    z-index: 999;
+}
+
+/* ================================
+   FILE UPLOAD (MATCH WIDTH)
+================================ */
+div[data-testid="stFileUploader"] {
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    width: 700px !important;
+    max-width: 700px !important;
+
+    z-index: 999;
+}
+
+/* ================================
+   FILE UPLOAD BUTTON STYLE
+================================ */
+div[data-testid="stFileUploader"] button {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+}
+
+/* Hide default upload text */
+div[data-testid="stFileUploader"] p {
+    display: none;
+>>>>>>> 83a324bede1798238ca30a877da1bd559188c888
 }
