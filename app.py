@@ -8,9 +8,9 @@ import docx
 # ---------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------
-GEMINI_API_KEY = "AIzaSyCZZJxv0uMC5iuOAsGyR9i6aCY7S7oJWD4"
+GEMINI_API_KEY = "AIzaSyCMWlPN-BiStg1YqRQtRpboIu6bHb1oPog"
 MODEL_NAME = "models/gemini-2.5-flash"
-PINECONE_API_KEY = "pcsk_3USSGW_6SqdVpmTERNR5Gu64tcxoo7dAih7BjtN5Sa8xtkssJB1k4ro22ALs3CTHNSKyEB"
+PINECONE_API_KEY = "pcsk_67Xu1d_EojEzJBEvUr68meqzWziMfAbD222ppP2GwccBfJY9Bod5z5dqaZLPk8P2YWFdr4"
 
 INDEX_NAME = "medical-chatbot"
 
