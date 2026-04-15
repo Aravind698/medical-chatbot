@@ -1,6 +1,5 @@
 streamlit==1.32.0
-torch
-langchain-community
-sentence-transformers
+langchain-community==0.0.29
 pinecone-client==3.2.2
+sentence-transformers==2.2.2
 python-dotenv
