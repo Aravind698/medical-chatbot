@@ -8,7 +8,7 @@ import docx
 # ---------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------
-GEMINI_API_KEY = "AIzaSyCMWlPN-BiStg1YqRQtRpboIu6bHb1oPog"
+GEMINI_API_KEY = "AQ.Ab8RN6KfIPtV32tngXe32RvEeaTQ78voJlCtrHHKJOwtHx4JGA"
 MODEL_NAME = "models/gemini-2.5-flash"
 PINECONE_API_KEY = "pcsk_67Xu1d_EojEzJBEvUr68meqzWziMfAbD222ppP2GwccBfJY9Bod5z5dqaZLPk8P2YWFdr4"
 
