@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* ================================
    BASE
 ================================ */
@@ -8,21 +7,21 @@ html, body, [data-testid="stApp"] {
 }
 
 /* ================================
-   CONTENT + CHAT AREA (LEFT ALIGN FIX)
+   CONTENT AREA
 ================================ */
 .block-container {
     max-width: 700px !important;
     margin: 0 auto !important;
     padding-bottom: 200px !important;
 
-    padding-left: 0px !important;     /* 👈 REMOVE LEFT SPACE */
-    padding-right: 0px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
 }
 
-/* 🔥 FORCE REMOVE INNER PADDING (KEY FIX) */
+/* REMOVE BROKEN LEFT SHIFT */
 .block-container > div {
     padding-left: 0px !important;
-    margin-left: -120px !important;   /* 👈 MOVE CONTENT LEFT */
+    margin-left: 0px !important;
 }
 
 /* Extra safety */
@@ -32,7 +31,7 @@ html, body, [data-testid="stApp"] {
 }
 
 /* ================================
-   SIDEBAR (REDUCED WIDTH)
+   SIDEBAR
 ================================ */
 section[data-testid="stSidebar"] {
     background: #87ceeb !important;
@@ -43,7 +42,7 @@ section[data-testid="stSidebar"] {
 }
 
 /* ================================
-   QUERY BAR (CENTERED)
+   CHAT INPUT (CENTERED)
 ================================ */
 div[data-testid="stChatInput"] {
     position: fixed !important;
@@ -51,7 +50,7 @@ div[data-testid="stChatInput"] {
     left: 50% !important;
     transform: translateX(-50%) !important;
 
-    width: 700px !important;
+    width: 90% !important;
     max-width: 700px !important;
 
     background: #ffffff !important;
@@ -61,7 +60,7 @@ div[data-testid="stChatInput"] {
 }
 
 /* ================================
-   FILE UPLOAD (MATCH WIDTH)
+   FILE UPLOADER
 ================================ */
 div[data-testid="stFileUploader"] {
     position: fixed !important;
@@ -69,15 +68,13 @@ div[data-testid="stFileUploader"] {
     left: 50% !important;
     transform: translateX(-50%) !important;
 
-    width: 700px !important;
+    width: 90% !important;
     max-width: 700px !important;
 
     z-index: 999;
 }
 
-/* ================================
-   FILE UPLOAD BUTTON STYLE
-================================ */
+/* FILE UPLOAD BUTTON STYLE */
 div[data-testid="stFileUploader"] button {
     width: 100%;
     height: 40px;
@@ -89,96 +86,32 @@ div[data-testid="stFileUploader"] button {
 /* Hide default upload text */
 div[data-testid="stFileUploader"] p {
     display: none;
-=======
-/* ================================
-   BASE
-================================ */
-html, body, [data-testid="stApp"] {
-    background: #ffffff;
-    color: #111827;
 }
 
 /* ================================
-   CONTENT + CHAT AREA (LEFT ALIGN FIX)
+   📱 MOBILE RESPONSIVE FIX
 ================================ */
-.block-container {
-    max-width: 700px !important;
-    margin: 0 auto !important;
-    padding-bottom: 200px !important;
+@media (max-width: 768px) {
 
-    padding-left: 0px !important;     /* 👈 REMOVE LEFT SPACE */
-    padding-right: 0px !important;
-}
+    .block-container {
+        max-width: 100% !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
 
-/* 🔥 FORCE REMOVE INNER PADDING (KEY FIX) */
-.block-container > div {
-    padding-left: 0px !important;
-    margin-left: -120px !important;   /* 👈 MOVE CONTENT LEFT */
-}
+    div[data-testid="stChatInput"] {
+        width: 95% !important;
+        bottom: 70px !important;
+    }
 
-/* Extra safety */
-.main > div {
-    max-width: 700px;
-    margin: 0 auto;
-}
+    div[data-testid="stFileUploader"] {
+        width: 95% !important;
+        bottom: 15px !important;
+    }
 
-/* ================================
-   SIDEBAR (REDUCED WIDTH)
-================================ */
-section[data-testid="stSidebar"] {
-    background: #87ceeb !important;
-    border-right: 1px solid #87ceeb;
-    width: 240px !important;
-    min-width: 240px !important;
-    max-width: 240px !important;
-}
-
-/* ================================
-   QUERY BAR (CENTERED)
-================================ */
-div[data-testid="stChatInput"] {
-    position: fixed !important;
-    bottom: 80px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-
-    width: 700px !important;
-    max-width: 700px !important;
-
-    background: #ffffff !important;
-    border: 1px solid #e5e7eb !important;
-    border-radius: 12px !important;
-    z-index: 999;
-}
-
-/* ================================
-   FILE UPLOAD (MATCH WIDTH)
-================================ */
-div[data-testid="stFileUploader"] {
-    position: fixed !important;
-    bottom: 20px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-
-    width: 700px !important;
-    max-width: 700px !important;
-
-    z-index: 999;
-}
-
-/* ================================
-   FILE UPLOAD BUTTON STYLE
-================================ */
-div[data-testid="stFileUploader"] button {
-    width: 100%;
-    height: 40px;
-    border-radius: 8px;
-    background: #f3f4f6;
-    border: 1px solid #d1d5db;
-}
-
-/* Hide default upload text */
-div[data-testid="stFileUploader"] p {
-    display: none;
->>>>>>> 83a324bede1798238ca30a877da1bd559188c888
+    section[data-testid="stSidebar"] {
+        width: 200px !important;
+        min-width: 200px !important;
+        max-width: 200px !important;
+    }
 }
