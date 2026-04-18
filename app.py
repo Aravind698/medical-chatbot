@@ -1,10 +1,9 @@
-import pkg_resources
-st.write([pkg.key for pkg in pkg_resources.working_set])
+
 import os
 import streamlit as st
 import requests
 from pinecone import Pinecone
-from langchain.huggingface import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 import PyPDF2
 import docx
 
