@@ -1,11 +1,10 @@
 streamlit>=1.32.0
 langchain==0.2.0
-langchain-community==0.0.29
+langchain-community>=0.2.0
 langchain-huggingface==0.0.3
 pinecone-client==3.2.2
 sentence-transformers==2.7.0
 python-dotenv
 PyPDF2
 python-docx
-# Force a newer version of Pillow that supports Python 3.14
 pillow>=11.0.0
