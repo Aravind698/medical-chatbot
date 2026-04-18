@@ -1,16 +1,19 @@
+import pkg_resources
+st.write([pkg.key for pkg in pkg_resources.working_set])
+import os
 import streamlit as st
 import requests
 from pinecone import Pinecone
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain.huggingface import HuggingFaceEmbeddings
 import PyPDF2
 import docx
 
 # ---------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------
-GEMINI_API_KEY = "AQ.Ab8RN6KfIPtV32tngXe32RvEeaTQ78voJlCtrHHKJOwtHx4JGA"
+GEMINI_API_KEY = st.secrets["gemini_api_key"]
 MODEL_NAME = "models/gemini-2.5-flash"
-PINECONE_API_KEY = "pcsk_67Xu1d_EojEzJBEvUr68meqzWziMfAbD222ppP2GwccBfJY9Bod5z5dqaZLPk8P2YWFdr4"
+PINECONE_API_KEY = st.secrets["pinecone_api_key"]
 
 INDEX_NAME = "medical-chatbot"
 
