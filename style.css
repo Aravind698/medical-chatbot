@@ -4,9 +4,12 @@
 ================================ */
 html, body, [data-testid="stApp"] {
     background: #ffffff;
-    color: #111827;
+    color: #ffffff;
 }
-
+div[data-testid="stFileUploader"] button {
+    ...
+    border: 1px solid #d1d5db;
+}  /* 👈 THIS WAS MISSING */
 /* ================================
    CONTENT + CHAT AREA (LEFT ALIGN FIX)
 ================================ */
@@ -182,3 +185,41 @@ div[data-testid="stFileUploader"] p {
     display: none;
 
 }  
+/* ================================
+   MOBILE RESPONSIVENESS (NO UI CHANGE)
+================================ */
+@media (max-width: 768px) {
+
+    /* Content width becomes flexible */
+    .block-container {
+        max-width: 100% !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    /* Remove aggressive left shift for mobile */
+    .block-container > div {
+        margin-left: 0px !important;
+    }
+
+    /* Sidebar becomes overlay style */
+    section[data-testid="stSidebar"] {
+        width: 200px !important;
+        min-width: 200px !important;
+        max-width: 200px !important;
+    }
+
+    /* Chat input full width */
+    div[data-testid="stChatInput"] {
+        width: 95% !important;
+        max-width: 95% !important;
+        bottom: 70px !important;
+    }
+
+    /* File uploader full width */
+    div[data-testid="stFileUploader"] {
+        width: 95% !important;
+        max-width: 95% !important;
+        bottom: 10px !important;
+    }
+}
